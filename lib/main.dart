@@ -66,7 +66,7 @@ class InitialScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Jogo()),
+                    MaterialPageRoute(builder: (context) => const JogoScreen()),
                   );
                 },
                 text: "Seção de Jogos",
@@ -497,6 +497,172 @@ class _JogoCaraOuCoroaState extends State<JogoCaraOuCoroa> {
             ElevatedButton(
               onPressed: jogar,
               child: const Text('Jogar Novamente'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class JogoScreen extends StatelessWidget {
+  const JogoScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Seção de Jogos"),
+        centerTitle: true,
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/background.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              AnimatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const JogoCaraOuCoroa()),
+                  );
+                },
+                text: "Cara ou Coroa",
+              ),
+              const SizedBox(height: 20),
+              AnimatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Jogo()),
+                  );
+                },
+                text: "Pedra, papel e tesoura",
+              ),
+              const SizedBox(height: 20),
+              AnimatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TerceiroJogo()),
+                  );
+                },
+                text: "Tiro ao alvo",
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//JOGO DE TIRO AO ALVO
+
+class TerceiroJogo extends StatefulWidget {
+  const TerceiroJogo({super.key});
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _TerceiroJogoState createState() => _TerceiroJogoState();
+}
+
+class _TerceiroJogoState extends State<TerceiroJogo> {
+  // Posições do alvo
+  double targetX = 0.5;
+  double targetY = 0.5;
+
+  // Contador de pontos
+  int score = 0;
+
+  // Tamanho do alvo
+  double targetSize = 100;
+
+  // Função para gerar novas coordenadas aleatórias para o alvo
+  void _generateNewTarget() {
+    setState(() {
+      targetX = Random().nextDouble();
+      targetY = Random().nextDouble();
+    });
+  }
+
+  // Função para detectar o clique e verificar se acertou o alvo
+  void _onTap(double x, double y) {
+    double dx = (x - targetX) * MediaQuery.of(context).size.width;
+    double dy = (y - targetY) * MediaQuery.of(context).size.height;
+
+    double distance = sqrt(dx * dx + dy * dy);
+
+    // Se a distância entre o clique e o alvo for menor que o tamanho do alvo, acertou
+    if (distance < targetSize) {
+      setState(() {
+        score++;
+        _generateNewTarget();
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Terceiro Jogo - Tiro ao Alvo"),
+        centerTitle: true,
+      ),
+      body: GestureDetector(
+        onTapDown: (TapDownDetails details) {
+          // Obtém as coordenadas relativas à tela para o clique
+          final RenderBox renderBox = context.findRenderObject() as RenderBox;
+          final localPosition = renderBox.globalToLocal(details.globalPosition);
+          _onTap(localPosition.dx / renderBox.size.width,
+              localPosition.dy / renderBox.size.height);
+        },
+        child: Stack(
+          children: [
+            // Tela de fundo
+            Container(
+              color: Colors.lightBlueAccent,
+              child: Center(
+                child: Text(
+                  'Pontos: $score',
+                  style: const TextStyle(
+                      fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            // O alvo
+            Positioned(
+              left:
+                  targetX * MediaQuery.of(context).size.width - targetSize / 2,
+              top:
+                  targetY * MediaQuery.of(context).size.height - targetSize / 2,
+              child: GestureDetector(
+                onTap: _generateNewTarget,
+                child: Container(
+                  width: targetSize,
+                  height: targetSize,
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 8.0,
+                        spreadRadius: 3.0,
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ),
           ],
         ),
