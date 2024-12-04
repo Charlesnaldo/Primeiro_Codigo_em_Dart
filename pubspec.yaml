@@ -1,0 +1,51 @@
+name: appdart
+description: "A new Flutter project."
+
+# Prevenção de publicação acidental para pub.dev
+publish_to: 'none' # Remova essa linha se você quiser publicar no pub.dev
+
+# Versão e número de build
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+# Dependências
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Ícones do Cupertino
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Configuração de lints
+  flutter_lints: ^4.0.0
+
+# Para informações gerais sobre a parte Dart desse arquivo, veja:
+# https://dart.dev/tools/pub/pubspec
+
+flutter:
+  # Inclui os ícones do Material
+  uses-material-design: true
+
+  # Seções de assets e imagens
+  assets:
+    - assets/background.jpg
+    - assets/padrao.png
+    - assets/pedra.png
+    - assets/papel.png
+    - assets/tesoura.png
+    - assets/gasolina.jpg
+      # Caminho correto para sua imagem
+
+  # Se você precisar adicionar fontes personalizadas, use a seção abaixo:
+  # fonts:
+  #   - family: YourFontFamily
+  #     fonts:
+  #       - asset: fonts/YourFont-Regular.ttf
+  #       - asset: fonts/YourFont-Bold.ttf
+  #         weight: 700
