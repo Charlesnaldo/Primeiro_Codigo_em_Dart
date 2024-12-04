@@ -11,6 +11,7 @@ void main() {
 }
 
 // AQUI INICIAL A PRIMEIRA PAGINA DA APLICAÇAO
+// COM BOTOES E DIRECIONAMENTOS LOGICOS
 
 class InitialScreen extends StatelessWidget {
   const InitialScreen({super.key});
@@ -18,69 +19,103 @@ class InitialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Tela Inicial"),
-          centerTitle: true,
+      appBar: AppBar(
+        title: const Text("Tela Inicial"),
+        centerTitle: true,
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/background.jpg'),
+            fit: BoxFit.cover,
+          ),
         ),
-        body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/background.jpg'),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: Center(
-            child: Column(
-              mainAxisAlignment:
-                  MainAxisAlignment.center, // Centraliza verticalmente
-              crossAxisAlignment:
-                  CrossAxisAlignment.center, // Centraliza horizontalmente
-              children: <Widget>[
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Home()),
-                    );
-                  },
-                  child: const Text("Frases do dia"),
-                ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment:
+                MainAxisAlignment.center, // Centraliza verticalmente
+            crossAxisAlignment:
+                CrossAxisAlignment.center, // Centraliza horizontalmente
+            children: <Widget>[
+              AnimatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Home()),
+                  );
+                },
+                text: "Frases do dia",
+              ),
 
-                // BOTAO GASOLINA
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TelaCombustivel()),
-                    );
-                  },
-                  child: const Text(" Gasolina "),
-                ),
+              // BOTAO GASOLINA
+              const SizedBox(height: 20),
+              AnimatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TelaCombustivel()),
+                  );
+                },
+                text: "Gasolina",
+              ),
 
-                // BOTAO JOGO
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Jogo()),
-                    );
-                  },
-                  child: const Text("Jogo"),
-                ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    // Lógica para o quarto botão
-                  },
-                  child: const Text("Botão 4"),
-                ),
-              ],
-            ),
+              // BOTAO JOGO
+              const SizedBox(height: 20),
+              AnimatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Jogo()),
+                  );
+                },
+                text: "Seção de Jogos",
+              ),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
+  }
+}
+
+// Widget AnimatedButton para animação e tamanho fixo
+class AnimatedButton extends StatelessWidget {
+  final VoidCallback onPressed;
+  final String text;
+
+  const AnimatedButton({
+    super.key,
+    required this.onPressed,
+    required this.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300), // Duração da animação
+      curve: Curves.easeInOut, // Tipo de animação
+      width: 300, // Largura fixa para todos os botões
+      height: 50, // Altura fixa para todos os botões
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          foregroundColor: Colors.white,
+          backgroundColor: const Color(0xFF000041), // Cor do texto
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(fontSize: 16),
+        ),
+      ),
+    );
   }
 }
 
@@ -370,7 +405,7 @@ class _TelaCombustivelState extends State<TelaCombustivel> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-                'assets/gasolina.jpg'), // Coloque o caminho da sua imagem aqui
+                'assets/background.jpg'), // Coloque o caminho da sua imagem aqui
             fit: BoxFit.cover, // Ajusta a imagem para cobrir o fundo todo
           ),
         ),
