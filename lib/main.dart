@@ -26,30 +26,51 @@ class InitialScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/background.jpg'),
+            image: AssetImage('assets/background3.jpg'),
             fit: BoxFit.cover,
           ),
         ),
         child: Center(
           child: Column(
-            mainAxisAlignment:
-                MainAxisAlignment.center, // Centraliza verticalmente
-            crossAxisAlignment:
-                CrossAxisAlignment.center, // Centraliza horizontalmente
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              AnimatedButton(
+              //  GIF antes dos botões
+              Image.asset(
+                'assets/animation.gif',
+                height: 400,
+                width: 400,
+              ),
+
+              const SizedBox(height: 5), // Espaço entre o GIF e os botões
+
+              // Botão Frases do Dia
+              ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const Home()),
                   );
                 },
-                text: "Frases do dia",
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(30.0), // Botões arredondados
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                  backgroundColor: Colors.green, // Cor do botão
+                ),
+                child: const Text(
+                  "Frases do Dia",
+                  style: TextStyle(fontSize: 18),
+                ),
               ),
 
-              // BOTAO GASOLINA
               const SizedBox(height: 20),
-              AnimatedButton(
+
+              // Botão Gasolina
+              ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -57,19 +78,45 @@ class InitialScreen extends StatelessWidget {
                         builder: (context) => const TelaCombustivel()),
                   );
                 },
-                text: "Gasolina",
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(30.0), // Botões arredondados
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                  backgroundColor: Colors.blue, // Cor do botão
+                ),
+                child: const Text(
+                  "Gasolina",
+                  style: TextStyle(fontSize: 18),
+                ),
               ),
 
-              // BOTAO JOGO
               const SizedBox(height: 20),
-              AnimatedButton(
+
+              // Botão Seção de Jogos
+              ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const JogoScreen()),
                   );
                 },
-                text: "Seção de Jogos",
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(30.0), // Botões arredondados
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                  backgroundColor:
+                      const Color.fromARGB(208, 244, 148, 141), // Cor do botão
+                ),
+                child: const Text(
+                  "Seção de Jogos",
+                  style: TextStyle(fontSize: 18),
+                ),
               ),
             ],
           ),
@@ -159,7 +206,7 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: const Color(0xFF000041),
         titleTextStyle: const TextStyle(
-          color: Colors.white,
+          color: Color.fromARGB(255, 244, 245, 246),
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
@@ -185,7 +232,7 @@ class _HomeState extends State<Home> {
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.italic,
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 46, 105, 192),
                   ),
                 ),
                 const SizedBox(height: 22),
@@ -230,7 +277,7 @@ class _HomeState extends State<Home> {
   }
 }
 
-// AQUI INICIA O JOGO JOKEPON
+// AQUI INICIA O JOGO PEDRA, PAPEL E TESOURA
 
 class Jogo extends StatefulWidget {
   const Jogo({super.key});
@@ -412,22 +459,33 @@ class _TelaCombustivelState extends State<TelaCombustivel> {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment
+                .stretch, // Expande os widgets para a largura total
             children: [
               // Dropdown para selecionar o combustível
-              DropdownButton<String>(
-                value: _combustivelEscolhido,
-                onChanged: (String? newValue) {
-                  setState(() {
-                    _combustivelEscolhido = newValue!;
-                  });
-                },
-                items: <String>['Álcool', 'Gasolina']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+              Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.white.withOpacity(0.7),
+                ),
+                child: DropdownButton<String>(
+                  value: _combustivelEscolhido,
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      _combustivelEscolhido = newValue!;
+                    });
+                  },
+                  isExpanded: true,
+                  items: <String>['Álcool', 'Gasolina']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
               ),
 
               // Campo para digitar o valor
@@ -436,23 +494,45 @@ class _TelaCombustivelState extends State<TelaCombustivel> {
                 decoration: InputDecoration(
                   labelText: 'Digite o valor do abastecimento',
                   errorText: _mensagemErro.isNotEmpty ? _mensagemErro : null,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white.withOpacity(0.7),
                 ),
                 keyboardType: const TextInputType.numberWithOptions(
                     decimal: true), // Suporte para valores decimais
               ),
 
+              const SizedBox(height: 20),
+
               // Botão de calcular
               ElevatedButton(
                 onPressed: calcular,
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white, backgroundColor: Colors.green,
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ), // Cor do texto
+                  textStyle: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 child: const Text('Calcular'),
               ),
 
-              // Exibição do resultado
               const SizedBox(height: 20),
-              Text(
-                _resultado,
-                style: const TextStyle(fontSize: 20),
-              ),
+
+              // Exibição do resultado
+              if (_resultado.isNotEmpty)
+                Text(
+                  _resultado,
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.w500),
+                  textAlign: TextAlign.center,
+                ),
             ],
           ),
         ),
@@ -472,11 +552,11 @@ class JogoCaraOuCoroa extends StatefulWidget {
 }
 
 class _JogoCaraOuCoroaState extends State<JogoCaraOuCoroa> {
-  final List<String> opcoes = ['Cara', 'Coroa'];
   String resultado = '';
-  String imagemResultado = '';
+  String imagemResultado =
+      'assets/placeholder.png'; // Substitua por uma imagem padrão ou inicial
+  final List<String> opcoes = ['Cara', 'Coroa'];
 
-  // Função para gerar um resultado aleatório
   void jogar() {
     final random = Random();
     int index = random.nextInt(opcoes.length);
@@ -548,8 +628,12 @@ class JogoScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Seção de Jogos"),
         centerTitle: true,
-        backgroundColor: Colors.transparent, // Faz o AppBar ficar transparente
+        backgroundColor: Colors.transparent, // Transparência do fundo
         elevation: 0, // Remove a sombra do AppBar
+        flexibleSpace: Container(
+          color:
+              Colors.transparent, // Garantir a transparência do espaço flexível
+        ),
       ),
       body: Stack(
         fit: StackFit
@@ -559,16 +643,14 @@ class JogoScreen extends StatelessWidget {
           const Positioned.fill(
             child: Image(
               image: AssetImage(
-                  'assets/jogo.png'), // Certifique-se que a imagem está na pasta assets
+                  'assets/jogo1.png'), // Certifique-se que a imagem está na pasta assets
               fit: BoxFit.cover, // A imagem de fundo deve cobrir toda a tela
             ),
           ),
           // Conteúdo da tela, agora posicionado sobre a imagem de fundo
           Center(
             child: Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal:
-                      16.0), // Adiciona padding para os botões não ficarem colados nas bordas
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -606,7 +688,7 @@ class JogoScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 30, vertical: 12),
-                      backgroundColor: const Color(0xff849ac4),
+                      backgroundColor: const Color.fromARGB(255, 185, 206, 245),
                     ),
                     child: const Text(
                       "Pedra, papel e tesoura",
@@ -627,10 +709,10 @@ class JogoScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 30, vertical: 12),
-                      backgroundColor: const Color(0xffab75c1),
+                      backgroundColor: const Color(0xffefc6ff),
                     ),
                     child: const Text(
-                      "Tiro ao alvo",
+                      "Capturando Olaf",
                       style: TextStyle(fontSize: 18),
                     ),
                   ),
@@ -644,7 +726,7 @@ class JogoScreen extends StatelessWidget {
   }
 }
 
-//JOGO DE TIRO AO ALVO
+//JOGO CAPTURANDO OLAF
 
 class TerceiroJogo extends StatefulWidget {
   const TerceiroJogo({super.key});
@@ -693,7 +775,7 @@ class _TerceiroJogoState extends State<TerceiroJogo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Terceiro Jogo - Tiro ao Alvo"),
+        title: const Text("Capture o OlaF"),
         centerTitle: true,
       ),
       body: GestureDetector(
@@ -706,18 +788,26 @@ class _TerceiroJogoState extends State<TerceiroJogo> {
         },
         child: Stack(
           children: [
-            // Tela de fundo
-            Container(
-              color: Colors.lightBlueAccent,
-              child: Center(
-                child: Text(
-                  'Pontos: $score',
-                  style: const TextStyle(
-                      fontSize: 30, fontWeight: FontWeight.bold),
-                ),
+            // Tela de fundo com imagem
+            Positioned.fill(
+              child: Image.asset(
+                'assets/background3.jpg', // Imagem de fundo
+                fit: BoxFit.cover,
               ),
             ),
-            // O alvo
+            // Texto de pontuação
+            Positioned(
+              top: 50,
+              left: 20,
+              child: Text(
+                'Olaf Capturados : $score',
+                style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 0, 0, 0)),
+              ),
+            ),
+            // O alvo (aqui usamos uma imagem para o alvo)
             Positioned(
               left:
                   targetX * MediaQuery.of(context).size.width - targetSize / 2,
@@ -729,14 +819,18 @@ class _TerceiroJogoState extends State<TerceiroJogo> {
                   width: targetSize,
                   height: targetSize,
                   decoration: BoxDecoration(
-                    color: Colors.red,
+                    image: const DecorationImage(
+                      image: AssetImage(
+                          'assets/animation.gif'), // Substitua com sua imagem de alvo
+                      fit: BoxFit.cover,
+                    ),
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(0.3),
                         blurRadius: 8.0,
                         spreadRadius: 3.0,
-                      )
+                      ),
                     ],
                   ),
                 ),

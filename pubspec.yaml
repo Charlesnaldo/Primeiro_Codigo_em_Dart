@@ -35,6 +35,7 @@ flutter:
   # Seções de assets e imagens
   assets:
     - assets/background.jpg
+    - assets/background3.jpg
     - assets/padrao.png
     - assets/pedra.png
     - assets/papel.png
@@ -44,6 +45,10 @@ flutter:
     - assets/jogos.jpg
     - assets/jogo.jpg
     - assets/jogo.png
+    - assets/fundo.jpg
+    - assets/alvo1.png
+    - assets/animation.gif
+    - assets/jogo1.png
       # Caminho correto para sua imagem
 
   # Se você precisar adicionar fontes personalizadas, use a seção abaixo:
