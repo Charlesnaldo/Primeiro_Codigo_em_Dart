@@ -474,12 +474,17 @@ class JogoCaraOuCoroa extends StatefulWidget {
 class _JogoCaraOuCoroaState extends State<JogoCaraOuCoroa> {
   final List<String> opcoes = ['Cara', 'Coroa'];
   String resultado = '';
+  String imagemResultado = '';
 
+  // Função para gerar um resultado aleatório
   void jogar() {
+    final random = Random();
+    int index = random.nextInt(opcoes.length);
+
     setState(() {
-      resultado = opcoes[
-          (opcoes.length * DateTime.now().millisecondsSinceEpoch).toInt() %
-              opcoes.length];
+      resultado = opcoes[index];
+      imagemResultado =
+          resultado == 'Cara' ? 'assets/cara.png' : 'assets/coroa.png';
     });
   }
 
@@ -493,7 +498,34 @@ class _JogoCaraOuCoroaState extends State<JogoCaraOuCoroa> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Resultado: $resultado', style: const TextStyle(fontSize: 24)),
+            // Exibe a imagem do resultado com animação
+            AnimatedSwitcher(
+              duration: const Duration(seconds: 1),
+              child: resultado.isEmpty
+                  ? const Text(
+                      'Clique em "Jogar" para começar!',
+                      key: ValueKey<String>('instrução'),
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    )
+                  : Column(
+                      key: ValueKey<String>(resultado),
+                      children: [
+                        Image.asset(
+                          imagemResultado,
+                          width: 150,
+                          height: 150,
+                        ),
+                        const SizedBox(height: 20),
+                        Text(
+                          'Resultado: $resultado',
+                          style: const TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+            ),
+            const SizedBox(height: 40),
             ElevatedButton(
               onPressed: jogar,
               child: const Text('Jogar Novamente'),
@@ -505,6 +537,8 @@ class _JogoCaraOuCoroaState extends State<JogoCaraOuCoroa> {
   }
 }
 
+// PAGINA DE JOGOS COM TODOS OS JOGOS,
+
 class JogoScreen extends StatelessWidget {
   const JogoScreen({super.key});
 
@@ -514,53 +548,97 @@ class JogoScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Seção de Jogos"),
         centerTitle: true,
+        backgroundColor: Colors.transparent, // Faz o AppBar ficar transparente
+        elevation: 0, // Remove a sombra do AppBar
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/background.jpg'),
-            fit: BoxFit.cover,
+      body: Stack(
+        fit: StackFit
+            .expand, // Faz a imagem de fundo ocupar toda a área disponível
+        children: <Widget>[
+          // Imagem de fundo que ocupa toda a tela
+          const Positioned.fill(
+            child: Image(
+              image: AssetImage(
+                  'assets/jogo.png'), // Certifique-se que a imagem está na pasta assets
+              fit: BoxFit.cover, // A imagem de fundo deve cobrir toda a tela
+            ),
           ),
-        ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              AnimatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const JogoCaraOuCoroa()),
-                  );
-                },
-                text: "Cara ou Coroa",
+          // Conteúdo da tela, agora posicionado sobre a imagem de fundo
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal:
+                      16.0), // Adiciona padding para os botões não ficarem colados nas bordas
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  // Botão para "Cara ou Coroa"
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const JogoCaraOuCoroa()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 12),
+                      backgroundColor:
+                          const Color(0xff8dc63f), // Cor de fundo do botão
+                    ),
+                    child: const Text(
+                      "Cara ou Coroa",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  const SizedBox(height: 30),
+
+                  // Botão para "Pedra, Papel e Tesoura"
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Jogo()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 12),
+                      backgroundColor: const Color(0xff849ac4),
+                    ),
+                    child: const Text(
+                      "Pedra, papel e tesoura",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  const SizedBox(height: 30),
+
+                  // Botão para "Tiro ao alvo"
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TerceiroJogo()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 12),
+                      backgroundColor: const Color(0xffab75c1),
+                    ),
+                    child: const Text(
+                      "Tiro ao alvo",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 20),
-              AnimatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Jogo()),
-                  );
-                },
-                text: "Pedra, papel e tesoura",
-              ),
-              const SizedBox(height: 20),
-              AnimatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const TerceiroJogo()),
-                  );
-                },
-                text: "Tiro ao alvo",
-              ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

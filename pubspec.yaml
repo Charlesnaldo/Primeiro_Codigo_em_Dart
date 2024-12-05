@@ -39,6 +39,11 @@ flutter:
     - assets/pedra.png
     - assets/papel.png
     - assets/tesoura.png
+    - assets/cara.png
+    - assets/coroa.png
+    - assets/jogos.jpg
+    - assets/jogo.jpg
+    - assets/jogo.png
       # Caminho correto para sua imagem
 
   # Se você precisar adicionar fontes personalizadas, use a seção abaixo:
