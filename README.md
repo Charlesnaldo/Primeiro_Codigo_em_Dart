@@ -36,9 +36,10 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 
      
 
-### 🔧 Instalação
+# 🔧 Instalação
 
-Pré-requisitos
+### 📋 Pré-requisitos
+
   * Flutter SDK instalado.
   * Dispositivo emulador ou físico configurado para execução.
     
