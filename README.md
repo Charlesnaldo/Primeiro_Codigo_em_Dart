@@ -99,9 +99,11 @@ flutter run
     * Botão para calcular.
 
 ## JogoScreen:
+<img src="assets/4.png" alt="Tela Inicial" width="150"> 
+
    * Tela que Inclui 3 jogos: Pedra, Papel e Tesoura, cara ou coroa e procurando Olaf
      
-<img src="assets/4.png" alt="Tela Inicial" width="150"> 
+
   
 ## Cara ou Coroa (JogoCaraOuCora)
 <img src="assets/5.png" alt="Tela Inicial" width="150"> 
