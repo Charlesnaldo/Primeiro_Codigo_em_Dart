@@ -23,26 +23,20 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 * InitialScreen:
     * Tela inicial com botões de navegação para as funcionalidades do app.
     * Inclui um fundo customizado e animações (GIF).
-      
-<img src="assets/1.png" alt="Tela Inicial" width="200">
-
-
-    
+     
+   
 * Home:
    * Tela que exibe frases motivacionais aleatórias.
    * Botão para gerar novas frases e retornar à tela inicial.
 
- <img src="assets/2.png" alt="Tela Inicial" width="200">    
-     
+       
 * TelaCombustivel:
    * aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
-   * 
- <img src="assets/3.png" alt="Tela Inicial" width="200">    
+    
      
 * JogoScreen:
    * Tela que Inclui 3 jogos: Pedra, Papel e Tesoura, cara ou coroa e procurando Olaf
-   * 
-<img src="assets/4.png" alt="Tela Inicial" width="200">  
+   
      
 
 # 🔧 Instalação
@@ -74,13 +68,17 @@ flutter run
 ## 5. Estrutura do Código
    
 # Tela Inicial (InitialScreen)
-
+<img src="assets/1.png" alt="Tela Inicial" width="150">
  * Apresenta um fundo com uma imagem personalizada e gif animado.
    
  * Três botões principais:   
    * Frases do Dia: Navega para a página "Home".
    * Gasolina: aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
    * Seção de Jogos: Navega para a página "JogoScreen" que contem 3 botoes cada um para um determinado jogo.
+  
+
+
+
      
 ## Frases do Dia (Home)
 
