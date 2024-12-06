@@ -24,21 +24,25 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
     * Tela inicial com botões de navegação para as funcionalidades do app.
     * Inclui um fundo customizado e animações (GIF).
       
-      ## Screenshots
+<img src="assets/1.png" alt="Tela Inicial" width="200">
 
-![App Screenshot](assets/1.png)
-<img src="assets/1.png" alt="Tela Inicial" width="100">
+
     
 * Home:
    * Tela que exibe frases motivacionais aleatórias.
    * Botão para gerar novas frases e retornar à tela inicial.
+
+ <img src="assets/2.png" alt="Tela Inicial" width="200">    
      
 * TelaCombustivel:
    * aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
+   * 
+ <img src="assets/3.png" alt="Tela Inicial" width="200">    
      
 * JogoScreen:
    * Tela que Inclui 3 jogos: Pedra, Papel e Tesoura, cara ou coroa e procurando Olaf
-
+   * 
+<img src="assets/4.png" alt="Tela Inicial" width="200">  
      
 
 # 🔧 Instalação
