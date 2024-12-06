@@ -146,9 +146,9 @@ flutter run
   * Animações:
     * GIFs adicionados para enriquecer a experiência visual.
       
-## 📌 Versão
+## 📌 Controle de Versão
 
-Nós usamos o git para controle de versão. 
+Este projeto utiliza o Git como sistema de controle de versão. Graças a ele, conseguimos gerenciar o código de forma eficiente, garantindo a rastreabilidade de alterações, colaboração em equipe e a segurança de sempre ter acesso a versões anteriores.
 
 ## ✒️ Autores
 
