@@ -90,6 +90,24 @@ flutter run
     * Uso de estilos personalizados em botões e textos para uma interface atrativa.
   * Animações:
     * GIFs adicionados para enriquecer a experiência visual.
+    * 
+## 📌 Versão
+
+Nós usamos o git para controle de versão. 
+
+## ✒️ Autores
+
+### Aryadna Martins Pereira
+### Ariana Martins Pereira
+### Ronaldo Charles de sousa
+### Rodrigo da Cunha Andrade
+
+
+
+
+
+
+
 
 
 
