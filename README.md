@@ -81,34 +81,34 @@ flutter run
 
      
 ## Frases do Dia (Home)
-
+<img src="assets/2.png" alt="Tela Inicial" width="150"> 
  * Exibe frases motivacionais para dev escolhidas aleatoriamente de uma lista.
  * Possui:
     * Botão para gerar nova frase.
     * Botão para voltar à tela inicial.
   
 ## GasolinaApp (TelaCombustivel)
-
+<img src="assets/3.png" alt="Tela Inicial" width="150"> 
  * Exibe um dropdow com opçoes para alcool e gasolina.
  * Possui:
     * caixa de texto para digitar o valor do abastecimento
     * Botão para calcular.
   
 ## Cara ou Coroa (JogoCaraOuCora)
-
+<img src="assets/5.png" alt="Tela Inicial" width="150"> 
  * Exibe um botao para jogar onde a maquina escolhe um lado aleatoriamente.
  * Possui:   
     * Botão para voltar.
   
 ## Pedra, Papel e Tesoura (Jogo)
-
+<img src="assets/6.png" alt="Tela Inicial" width="150"> 
  * Exibe 3 opções de escolha para pedra, papel e tesoura.
  * ao escolher a maquina aleatorimente escolhe outra e fazer a comparação e exibe na tela quem ganohou ou se foi empate
  * Possui:   
     * Botão para voltar.
       
 ## Capturando Olaf (TerceiroJogo)
-
+<img src="assets/7.png" alt="Tela Inicial" width="150"> 
  * Exibe o Persongem Olaf na tela ao clicar ele muda de lugar e começa contagem de quantas vezes foi capturado.
  * Possui:   
     * Botão para voltar.
