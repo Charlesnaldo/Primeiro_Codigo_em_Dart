@@ -47,8 +47,8 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 
 1. Clone o repositório:
 ```
-git clone https://github.com/usuario/meu_aplicativo.git
-cd meu_aplicativo
+git clone [https://github.com/Charlesnaldo/Primeiro_Codigo_em_Dart]
+cd Primeiro_Codigo_em_Dart
 ```
 
 2. Instale as dependências:
