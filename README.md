@@ -71,13 +71,14 @@ flutter run
 <img src="assets/1.png" alt="Tela Inicial" width="150"
 align="left" style="margin-right: 20px;"/>
 
- * Apresenta um fundo com uma imagem personalizada e gif animado.
+   * Apresenta um fundo com uma imagem personalizada e gif animado.
    
- * Três botões principais:   
-   * Frases do Dia: Navega para a página "Home".
-   * Gasolina: aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
-   * Seção de Jogos: Navega para a página "JogoScreen" que contem 3 botoes cada um para um determinado jogo.
-   * 
+   * Três botões principais:
+   
+      * Frases do Dia: Navega para a página "Home".
+      * Gasolina: aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
+      * Seção de Jogos: Navega para a página "JogoScreen" que contem 3 botoes cada um para um determinado jogo.
+    
   <br clear="left"/>
 
 
