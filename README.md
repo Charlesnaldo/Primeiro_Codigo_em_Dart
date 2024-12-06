@@ -10,11 +10,11 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
   
 ## 2. Tecnologias Utilizadas:
 
-*Linguagem: Dart
-*Framework: Flutter
-*Outras Dependências:
-  *dart:math: Para geração de números aleatórios.
-  *flutter/material.dart: Para construção da interface de usuário.
+* Linguagem: Dart
+* Framework: Flutter
+* Outras Dependências:
+  * dart:math: Para geração de números aleatórios.
+  * flutter/material.dart: Para construção da interface de usuário.
   
 ##3. Estrutura do Projeto
 
