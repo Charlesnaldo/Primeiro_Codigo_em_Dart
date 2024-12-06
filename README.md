@@ -5,7 +5,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 
 * Frases do Dia: Gera frases motivacionais aleatórias para desenvolvedores.
 * Gasolina: (descrição futura do módulo).
-* Seção de Jogos: Inclui 3 jogos de Pedra, Papel e Tesoura, cara ou cora e procurando olaf
+* 🎮 Seção de Jogos: Inclui 3 jogos de Pedra, Papel e Tesoura, cara ou cora e procurando olaf
 
   
 ## 2. Tecnologias Utilizadas:
@@ -18,7 +18,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
   
 # 3. Estrutura do Projeto
 
-## Páginas Principais
+## 🧰 Páginas Principais
 
 * InitialScreen:
     * Tela inicial com botões de navegação para as funcionalidades do app.
@@ -34,7 +34,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
    * aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
     
      
-* JogoScreen:
+* 🎮 JogoScreen:
    * Tela que Inclui 3 jogos: Pedra, Papel e Tesoura, cara ou coroa e procurando Olaf
    
      
@@ -46,7 +46,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
   * Flutter SDK instalado.
   * Dispositivo emulador ou físico configurado para execução.
     
-## Passos para Executar
+## 📦 Passos para Executar
 
 1. Clone o repositório:
 ```
@@ -134,7 +134,7 @@ flutter run
   * Botão com animação suave e estilo consistente.
 
     
-## 6. Recursos e Design
+## 🧰 6. Recursos e Design
 
   * Fundo:
     * Imagens localizadas na pasta assets.
@@ -157,7 +157,10 @@ Este projeto utiliza o Git como sistema de controle de versão. Graças a ele, c
 * Ronaldo Charles de sousa
 * Rodrigo da Cunha Andrade
 
+## 🎥 Assista ao vídeo de demonstração
 
+
+[![Flutter e Dart ](https://img.youtube.com/vi/YlJkWDIcFhE/maxresdefault.jpg)](https://www.youtube.com/watch?v=YlJkWDIcFhE)
 
 
 
