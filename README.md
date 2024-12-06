@@ -23,6 +23,10 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 * InitialScreen:
     * Tela inicial com botões de navegação para as funcionalidades do app.
     * Inclui um fundo customizado e animações (GIF).
+      
+      ## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
     
 * Home:
    * Tela que exibe frases motivacionais aleatórias.
