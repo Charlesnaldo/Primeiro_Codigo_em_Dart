@@ -78,7 +78,7 @@ flutter run
  * Possui:
     * Botão para gerar nova frase.
     * Botão para voltar à tela inicial.
-    * 
+      
 ## Componente Personalizado (AnimatedButton)
 
   * Botão com animação suave e estilo consistente.
