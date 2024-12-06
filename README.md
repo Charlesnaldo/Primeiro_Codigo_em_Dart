@@ -68,18 +68,16 @@ flutter run
 ## 5. Estrutura do Código
    
 # Tela Inicial (InitialScreen)
-<img src="assets/1.png" alt="Tela Inicial" width="150"
-align="left" style="margin-right: 30px;"/>
+<img src="assets/1.png" alt="Tela Inicial" width="200" style="margin-right: 20px; margin-bottom: 20px;" align="left"/>
 
-   * Apresenta um fundo com uma imagem personalizada e gif animado.
-   
-   * Três botões principais:
-   
-      * Frases do Dia: Navega para a página "Home".
-      * Gasolina: aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
-      * Seção de Jogos: Navega para a página "JogoScreen" que contem 3 botoes cada um para um determinado jogo.
-    
-  <br clear="left"/>
+- Tela inicial com botões de navegação para as funcionalidades do app.  
+- Inclui um fundo customizado e animações (GIF).  
+- Três botões principais:
+  - **Frases do Dia**: Navega para a página "Home".
+  - **Gasolina**: Ajuda os usuários a calcular qual combustível é mais vantajoso.
+  - **Seção de Jogos**: Navega para a página "JogoScreen".
+
+<br clear="left"/>
 
 
 
