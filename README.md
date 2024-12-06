@@ -8,7 +8,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 * Seção de Jogos: Inclui um jogo de Pedra, Papel e Tesoura.
 
   
-## Tecnologias Utilizadas:
+## 2. Tecnologias Utilizadas:
 
 * Linguagem: Dart
 * Framework: Flutter
@@ -18,7 +18,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
   
 ## 3. Estrutura do Projeto
 
-#Páginas Principais
+# Páginas Principais
  1 .InitialScreen:
     *Tela inicial com botões de navegação para as funcionalidades do app.
     *Inclui um fundo customizado e animações (GIF).
