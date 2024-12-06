@@ -69,7 +69,7 @@ flutter run
    
 # Tela Inicial (InitialScreen)
 <img src="assets/1.png" alt="Tela Inicial" width="150"
-align="left" style="margin-right: 20px;"/>
+align="left" style="margin-right: 30px;"/>
 
    * Apresenta um fundo com uma imagem personalizada e gif animado.
    
