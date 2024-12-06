@@ -20,18 +20,18 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 
 ## Páginas Principais
 
-InitialScreen: 
+* InitialScreen:
     * Tela inicial com botões de navegação para as funcionalidades do app.
     * Inclui um fundo customizado e animações (GIF).
     
-Home:
+* Home:
    * Tela que exibe frases motivacionais aleatórias.
    * Botão para gerar novas frases e retornar à tela inicial.
      
-TelaCombustivel:
+* TelaCombustivel:
    * (Descrição do módulo ainda não implementada).
      
-JogoScreen:
+* JogoScreen:
    * Tela para iniciar o jogo Pedra, Papel e Tesoura (em construção).
 
      
