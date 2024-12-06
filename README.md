@@ -68,7 +68,7 @@ flutter run
 ## 5. Estrutura do Código
    
 # Tela Inicial (InitialScreen)
-<img src="assets/1.png" alt="Tela Inicial" width="200" style="margin-right: 20px; margin-bottom: 20px;" align="left"/>
+<img src="assets/1.png" alt="Tela Inicial" width="150">
 
 - Tela inicial com botões de navegação para as funcionalidades do app.  
 - Inclui um fundo customizado e animações (GIF).  
