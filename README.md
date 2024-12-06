@@ -27,6 +27,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
       ## Screenshots
 
 ![App Screenshot](assets/1.png)
+<img src="assets/1.png" alt="Tela Inicial" width="100">
     
 * Home:
    * Tela que exibe frases motivacionais aleatórias.
