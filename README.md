@@ -3,12 +3,12 @@
 ## 🚀 Visão Geral
 Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionalidades variadas por meio de uma interface intuitiva e organizada. O aplicativo oferece as seguintes seções principais:
 
-* Frases do Dia: Gera frases motivacionais aleatórias.
+* Frases do Dia: Gera frases motivacionais aleatórias para desenvolvedores.
 * Gasolina: (descrição futura do módulo).
 * Seção de Jogos: Inclui um jogo de Pedra, Papel e Tesoura.
 
   
-## 2. Tecnologias Utilizadas:
+## Tecnologias Utilizadas:
 
 * Linguagem: Dart
 * Framework: Flutter
@@ -42,48 +42,54 @@ Pré-requisitos
     
 ##Passos para Executar
 
-Clone o repositório:
-
-bash
-Copiar código
+1. Clone o repositório:
+```
 git clone https://github.com/usuario/meu_aplicativo.git
 cd meu_aplicativo
-Instale as dependências:
+```
 
-bash
-Copiar código
+2. Instale as dependências:
+```
 flutter pub get
-Execute o aplicativo:
+```
 
-bash
+3. Execute o aplicativo:
+
+```
 Copiar código
 flutter run
-5. Estrutura do Código
-Tela Inicial (InitialScreen)
-Apresenta um fundo com uma imagem personalizada.
-Três botões principais:
-Frases do Dia: Navega para a página "Home".
-Gasolina: (Função futura).
-Seção de Jogos: Navega para a página "JogoScreen".
-Frases do Dia (Home)
-Exibe frases motivacionais escolhidas aleatoriamente de uma lista.
-Possui:
-Botão para gerar nova frase.
-Botão para voltar à tela inicial.
-Componente Personalizado (AnimatedButton)
-Botão com animação suave e estilo consistente.
-6. Recursos e Design
-Fundo:
-Imagens localizadas na pasta assets.
-Configuradas no arquivo pubspec.yaml.
-Estilos:
-Uso de estilos personalizados em botões e textos para uma interface atrativa.
-Animações:
-GIFs adicionados para enriquecer a experiência visual.
-7. Funcionalidades Futuras
-Implementação da funcionalidade do botão "Gasolina".
-Finalização do jogo "Pedra, Papel e Tesoura".
-8. Licença
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+```
+## 5. Estrutura do Código
+   
+#Tela Inicial (InitialScreen)
+
+ * Apresenta um fundo com uma imagem personalizada.
+ * Três botões principais:
+   * Frases do Dia: Navega para a página "Home".
+   * Gasolina: (Função futura).
+   * Seção de Jogos: Navega para a página "JogoScreen".
+     
+##Frases do Dia (Home)
+
+ * Exibe frases motivacionais escolhidas aleatoriamente de uma lista.
+ * Possui:
+    * Botão para gerar nova frase.
+    * Botão para voltar à tela inicial.
+    * 
+##Componente Personalizado (AnimatedButton)
+
+  * Botão com animação suave e estilo consistente.
+
+    
+## 6. Recursos e Design
+
+  * Fundo:
+    * Imagens localizadas na pasta assets.
+    * Configuradas no arquivo pubspec.yaml.
+  * Estilos:
+    * Uso de estilos personalizados em botões e textos para uma interface atrativa.
+  * Animações:
+    * GIFs adicionados para enriquecer a experiência visual.
+
 
 
