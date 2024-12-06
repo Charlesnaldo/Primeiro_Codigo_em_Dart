@@ -34,7 +34,8 @@ JogoScreen:
    * Tela para iniciar o jogo Pedra, Papel e Tesoura (em construção).
 
      
-## 4. Configuração e Execução
+
+### 🔧 Instalação
 
 Pré-requisitos
   * Flutter SDK instalado.
