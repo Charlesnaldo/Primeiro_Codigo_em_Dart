@@ -1,4 +1,4 @@
-# Documentação do Aplicativo Flutter
+# 📖 Documentação do Aplicativo Flutter
 
 ## 🚀 Visão Geral
 Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionalidades variadas por meio de uma interface intuitiva e organizada. O aplicativo oferece as seguintes seções principais:
