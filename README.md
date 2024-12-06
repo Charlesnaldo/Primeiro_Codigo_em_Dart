@@ -47,7 +47,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 
 1. Clone o repositório:
 ```
-git clone (https://github.com/Charlesnaldo/Primeiro_Codigo_em_Dart)
+git clone https://github.com/Charlesnaldo/Primeiro_Codigo_em_Dart
 cd Primeiro_Codigo_em_Dart
 ```
 
