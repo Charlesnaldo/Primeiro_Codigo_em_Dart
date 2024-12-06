@@ -97,8 +97,8 @@ Nós usamos o git para controle de versão.
 
 ## ✒️ Autores
 
-### Aryadna Martins Pereira
-### Ariana Martins Pereira
+# Aryadna Martins Pereira
+## Ariana Martins Pereira
 ### Ronaldo Charles de sousa
 ### Rodrigo da Cunha Andrade
 
