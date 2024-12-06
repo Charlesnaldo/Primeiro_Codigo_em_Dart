@@ -20,7 +20,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 
 ## Páginas Principais
 
- 1 .InitialScreen: 
+InitialScreen: 
     * Tela inicial com botões de navegação para as funcionalidades do app.
     * Inclui um fundo customizado e animações (GIF).
     
