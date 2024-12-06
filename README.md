@@ -16,7 +16,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
   * dart:math: Para geração de números aleatórios.
   * flutter/material.dart: Para construção da interface de usuário.
   
-##3. Estrutura do Projeto
+## 3. Estrutura do Projeto
 
 #Páginas Principais
  1 .InitialScreen:
@@ -34,13 +34,13 @@ JogoScreen:
    * Tela para iniciar o jogo Pedra, Papel e Tesoura (em construção).
 
      
-##4. Configuração e Execução
+## 4. Configuração e Execução
 
 Pré-requisitos
   * Flutter SDK instalado.
   * Dispositivo emulador ou físico configurado para execução.
     
-##Passos para Executar
+## Passos para Executar
 
 1. Clone o repositório:
 ```
@@ -61,7 +61,7 @@ flutter run
 ```
 ## 5. Estrutura do Código
    
-#Tela Inicial (InitialScreen)
+# Tela Inicial (InitialScreen)
 
  * Apresenta um fundo com uma imagem personalizada.
  * Três botões principais:
@@ -69,14 +69,14 @@ flutter run
    * Gasolina: (Função futura).
    * Seção de Jogos: Navega para a página "JogoScreen".
      
-##Frases do Dia (Home)
+## Frases do Dia (Home)
 
  * Exibe frases motivacionais escolhidas aleatoriamente de uma lista.
  * Possui:
     * Botão para gerar nova frase.
     * Botão para voltar à tela inicial.
     * 
-##Componente Personalizado (AnimatedButton)
+## Componente Personalizado (AnimatedButton)
 
   * Botão com animação suave e estilo consistente.
 
