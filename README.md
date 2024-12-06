@@ -19,9 +19,10 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 ## 3. Estrutura do Projeto
 
 # Páginas Principais
- 1 .InitialScreen:
-    *Tela inicial com botões de navegação para as funcionalidades do app.
-    *Inclui um fundo customizado e animações (GIF).
+
+ 1 .InitialScreen: 
+    * Tela inicial com botões de navegação para as funcionalidades do app.
+    * Inclui um fundo customizado e animações (GIF).
     
 Home:
    * Tela que exibe frases motivacionais aleatórias.
@@ -29,7 +30,7 @@ Home:
      
 TelaCombustivel:
    * (Descrição do módulo ainda não implementada).
-   * 
+     
 JogoScreen:
    * Tela para iniciar o jogo Pedra, Papel e Tesoura (em construção).
 
@@ -65,9 +66,10 @@ flutter run
 # Tela Inicial (InitialScreen)
 
  * Apresenta um fundo com uma imagem personalizada.
- * Três botões principais:
+   
+ * Três botões principais:   
    * Frases do Dia: Navega para a página "Home".
-   * Gasolina: (Função futura).
+   * Gasolina: aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
    * Seção de Jogos: Navega para a página "JogoScreen".
      
 ## Frases do Dia (Home)
@@ -87,11 +89,13 @@ flutter run
   * Fundo:
     * Imagens localizadas na pasta assets.
     * Configuradas no arquivo pubspec.yaml.
+      
   * Estilos:
     * Uso de estilos personalizados em botões e textos para uma interface atrativa.
+      
   * Animações:
     * GIFs adicionados para enriquecer a experiência visual.
-    * 
+      
 ## 📌 Versão
 
 Nós usamos o git para controle de versão. 
