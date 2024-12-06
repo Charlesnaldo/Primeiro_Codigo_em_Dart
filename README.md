@@ -5,7 +5,7 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
 
 * Frases do Dia: Gera frases motivacionais aleatórias para desenvolvedores.
 * Gasolina: (descrição futura do módulo).
-* Seção de Jogos: Inclui um jogo de Pedra, Papel e Tesoura.
+* Seção de Jogos: Inclui 3 jogos de Pedra, Papel e Tesoura, cara ou cora e procurando olaf
 
   
 ## 2. Tecnologias Utilizadas:
@@ -29,10 +29,10 @@ Este aplicativo Flutter foi desenvolvido com o objetivo de demonstrar funcionali
    * Botão para gerar novas frases e retornar à tela inicial.
      
 * TelaCombustivel:
-   * (Descrição do módulo ainda não implementada).
+   * aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
      
 * JogoScreen:
-   * Tela para iniciar o jogo Pedra, Papel e Tesoura (em construção).
+   * Tela que Inclui 3 jogos: Pedra, Papel e Tesoura, cara ou coroa e procurando Olaf
 
      
 
@@ -65,19 +65,47 @@ flutter run
    
 # Tela Inicial (InitialScreen)
 
- * Apresenta um fundo com uma imagem personalizada.
+ * Apresenta um fundo com uma imagem personalizada e gif animado.
    
  * Três botões principais:   
    * Frases do Dia: Navega para a página "Home".
    * Gasolina: aplicativo para ajudar os usuários a calcular qual combustível é mais vantajoso economicamente entre álcool e gasolina.
-   * Seção de Jogos: Navega para a página "JogoScreen".
+   * Seção de Jogos: Navega para a página "JogoScreen" que contem 3 botoes cada um para um determinado jogo.
      
 ## Frases do Dia (Home)
 
- * Exibe frases motivacionais escolhidas aleatoriamente de uma lista.
+ * Exibe frases motivacionais para dev escolhidas aleatoriamente de uma lista.
  * Possui:
     * Botão para gerar nova frase.
     * Botão para voltar à tela inicial.
+  
+## GasolinaApp (TelaCombustivel)
+
+ * Exibe um dropdow com opçoes para alcool e gasolina.
+ * Possui:
+    * caixa de texto para digitar o valor do abastecimento
+    * Botão para calcular.
+  
+## Cara ou Coroa (JogoCaraOuCora)
+
+ * Exibe um botao para jogar onde a maquina escolhe um lado aleatoriamente.
+ * Possui:   
+    * Botão para voltar.
+  
+## Pedra, Papel e Tesoura (Jogo)
+
+ * Exibe 3 opções de escolha para pedra, papel e tesoura.
+ * ao escolher a maquina aleatorimente escolhe outra e fazer a comparação e exibe na tela quem ganohou ou se foi empate
+ * Possui:   
+    * Botão para voltar.
+      
+## Capturando Olaf (TerceiroJogo)
+
+ * Exibe o Persongem Olaf na tela ao clicar ele muda de lugar e começa contagem de quantas vezes foi capturado.
+ * Possui:   
+    * Botão para voltar.
+            
+      
       
 ## Componente Personalizado (AnimatedButton)
 
